@@ -4,5 +4,7 @@ services:
     image: santismdev/pythondemoapp:latest
     container_name: my-python-app
     restart: always
+  database:
+    image:
     ports:
       - 8080:8000
