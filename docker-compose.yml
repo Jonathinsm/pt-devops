@@ -1,10 +1,12 @@
 version: '2.18'
 services:
   python-app:
-    image: santismdev/pythondemoapp:latest
+    image: jonathinsm/pythondemoapp:latest
     container_name: my-python-app
     restart: always
-  database:
-    image:
     ports:
-      - 8080:8000
+      - 8000:8000
+  database:
+    image: mongo:6-jammy
+    ports:
+      - 27017:27017
